@@ -1,0 +1,58 @@
+AI Security Risk Assessment
+
+Scope & Purpose
+Focuses on identifying security risks in AI systems.
+Highlights vulnerabilities from development → deployment → operational use.
+Goal: provide a framework for organizations to assess, mitigate, and monitor risks.
+
+Major Risk Categories
+
+Data Risks
+Data poisoning and manipulation.
+Leakage of sensitive training data.
+Biases embedded into AI outputs.
+
+Model Risks
+Model theft or extraction.
+Adversarial attacks (evasion, perturbations).
+Backdoors in pre-trained models.
+
+System/Operational Risks
+Insecure APIs and integrations.
+Misconfigured infrastructure (cloud/Kubernetes).
+Inadequate monitoring of agentic/autonomous AI systems.
+
+Governance & Compliance Risks
+Lack of explainability and traceability.
+Gaps in accountability for AI-driven decisions.
+Non-compliance with AI regulations (e.g., EU AI Act, NIST AI RMF).
+
+Supply Chain & Third-Party Risks
+Risks from open-source AI components.
+Vulnerabilities in third-party APIs, plugins, or datasets.
+Potential for cascading failures via vendor ecosystems.
+
+
+Mitigation Strategies
+
+Data Security: enforce data provenance, validation, and monitoring pipelines.
+Model Protection: adversarial training, watermarking, access control on models.
+System Hardening: API security, zero-trust architecture, runtime monitoring.
+Governance: clear accountability, human-in-the-loop controls, audit logging.
+Supply Chain Security: dependency scanning, vendor risk assessments, sandboxing integrations.
+
+
+Risk Assessment Approach
+Use risk scoring frameworks aligned with NIST AI RMF, ISO/IEC 42001.
+Evaluate likelihood vs. impact for each AI risk.
+Apply continuous red teaming and stress testing to validate defenses.
+
+Key Takeaways
+
+AI introduces unique risks beyond traditional IT systems.
+Agentic/autonomous AI creates unpredictable behaviors that challenge security perimeters.
+Organizations must treat AI security as integral to overall cybersecurity strategy, not an afterthought.
+Continuous monitoring, governance, and regulatory compliance are essential pillars for secure AI adoption.
+
+
+Reference: https://media.licdn.com/dms/document/media/v2/D4D1FAQGRtkgWJXKu7Q/feedshare-document-pdf-analyzed/B4DZi5EwH6HYAY-/0/1755451690627?e=1756339200&v=beta&t=13Az1MQlfD_kBUZEuXyQ1JVBSgxt79P3QkQg7XAflDI
