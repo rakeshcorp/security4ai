@@ -1,0 +1,76 @@
+AI Security Summary – AI Risk Atlas: Taxonomy and Tooling for Navigating AI Risks and Resources
+
+1. Overview
+
+AI Risk Atlas: Consolidates risks from multiple sources into a unified taxonomy.
+Focus on Generative AI and Agentic AI, highlighting unique security and governance challenges.
+Risk Atlas Nexus: Open-source tools that bridge risk taxonomies, benchmarks, datasets, and mitigations for operational AI governance.
+
+2. AI Risk Taxonomy – Security-Relevant Categories
+🔹 Input & Training Data Risks
+
+Data privacy & confidentiality – leakage of sensitive/confidential information in training data.
+Data integrity & provenance – bias, contamination, unrepresentative samples, uncertain data sources.
+Improper retraining – reusing undesirable outputs in training pipelines.
+Usage rights – restrictions from IP, licenses, or data laws.
+
+🔹 Inference Risks
+
+Prompt-based attacks – prompt injection, social hacking, indirect instructions, context overload.
+Membership inference attacks – deducing if specific data was in training.
+Prompt leaking & IP disclosure – extracting system prompts or proprietary information.
+Sensitive data in prompts – confidential/PII exposed via user input.
+
+🔹 Output Risks
+
+Hallucinations – factually false or misleading outputs.
+Harmful/toxic content – violent, discriminatory, or abusive text.
+Disinformation & deepfakes – spreading false narratives, impersonation.
+Code generation risks – insecure or harmful code outputs.
+Data leakage – confidential or personal data revealed in outputs.
+Copyright infringement – content identical/similar to protected works.
+
+🔹 Agentic AI Risks
+
+Unauthorized use – attackers hijacking agent behavior.
+External resource exploitation – attacks on tools/APIs agents rely on.
+Trust boundary exploits – privilege escalation in multi-agent systems.
+Function call hallucinations – incorrect or harmful API/tool calls.
+Misaligned/redundant actions – actions outside intended scope or wasted loops.
+Over/under reliance – misplaced human trust in agents’ decisions.
+
+🔹 Non-Technical Risks (Security Implications)
+
+Lack of transparency – insufficient documentation hinders accountability.
+Legal accountability gaps – unclear liability for AI failures.
+Lack of testing diversity – missing socio-technical perspectives.
+Impact on human agency – reduced human oversight and decision-making.
+
+3. Tooling for AI Security
+
+Risk Atlas Nexus
+Creates a knowledge graph to align risks with taxonomies (NIST AI RMF, OWASP LLM Top 10, MIT AI Risk Repository, etc.).
+Supports LLM-assisted compliance workflows and automated risk questionnaires.
+
+Mitigation Mapping
+Risks mapped to detectors (e.g., Granite Guardian for bias/prompt injection).
+Risks mapped to governance frameworks (NIST RMF, EU AI Act).
+
+GAF-Guard
+Agentic framework for real-time governance.
+Automates risk detection, prioritization, and monitoring of deployed LLMs.
+
+4. Key AI Security Risks (Examples)
+
+Evasion attacks – adversarial inputs manipulating model behavior.
+Membership inference – exposing training dataset contents.
+Prompt injection & social hacking – malicious manipulation of outputs.
+Data leakage – confidential/PII revealed via prompts, training, or outputs.
+Misuse of agents – unauthorized or misaligned actions.
+
+5. Key Takeaways
+
+AI Risk Atlas provides a shared vocabulary for AI security and governance.
+Security risks span across data, inference, outputs, and agentic autonomy.
+Automation + knowledge graphs lower governance barriers but require human oversight.
+Open-source Risk Atlas Nexus invites community contributions for evolving threats and mitigations.
