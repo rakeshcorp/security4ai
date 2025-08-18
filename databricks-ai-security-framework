@@ -35,21 +35,21 @@ Model operations
  Model build
  Model management
 15 specific risks:
-5.1 Lack of tracking and reproducibility of experiments
-5.2 Model drift
-5.3 Hyperparameters stealing
-5.4 Malicious libraries
-6.1 Evaluation data poisoning
-6.2 Insufficient evaluation data
-6.3 Lack of interpretability and explainability
-7.1 Backdoor machine learning/Trojaned model
-7.2 Model assets leak
-7.3 ML supply chain vulnerabilities
-7.4 Source code control attack
-8.1 Model attribution
-8.2 Model theft
-8.3 Model lifecycle without HITL
-8.4 Model inversion
+5.1 Lack of tracking and reproducibility of experiments: Track ML training runs for measuring, versioning, tracking model artifacts/algorithms, training environment, hyperparameters, metrics and results.
+5.2 Model drift:  Secure model features to track changes to features, monitor data and AI system for these changes for further actions.
+5.3 Hyperparameters stealing:  Track ML training runs in the model development process, including parameter settings, securely. User access control lists.
+5.4 Malicious libraries: Third-party library control to limit the potential for malicious third-party libraries and code.
+6.1 Evaluation data poisoning: Access control for data/objects, secure & private network access, data quality checks, data lineage, Automate LLM evaluation to capture performance insights.
+6.2 Insufficient evaluation data: Build models on clean, representative data, leveraging RAG for LLMs, and continuously evaluating outputs through performance monitoring and prompt-based comparisons.
+6.3 Lack of interpretability and explainability: performance tracking, monitoring, explainability tools (e.g., LIME, SHAP), model cards, red teaming, and human-in-the-loop oversight.
+7.1 Backdoor machine learning/Trojaned model: Pretrain LLMs on in-house data, continuously scanning third-party models for risks in CI/CD, hardening runtimes, controlling libraries, and Sandboxing.
+7.2 Model assets leak: Access control, secure & private network access, control data access/objects, securely manage credentials of data sources/assets.
+7.3 ML supply chain vulnerabilities: Pretrain LLMs on in-house data, continuously scanning third-party models for risks in CI/CD, hardening runtimes, controlling libraries, and Sandboxing.
+7.4 Source code control attack: Source code control, Security scan for third-party libraries, sandbox testing. 
+8.1 Model attribution: Create model aliases, tags and annotations for documenting and discovering models. Control data access and secure sharing.
+8.2 Model theft: Encrypt models, secure model serving endpoints, securely manage credentials, rate limit APIs, manage securely LLM providers, audit logs and monitoring.
+8.3 Model lifecycle without HITL: Control access to data, objects, models & model assets with human in the loop oversight on permissions, versions and approvals to promote models to production.
+8.4 Model inversion: Access control, secure network access, encrypt models, secure model serving endpoints, securely manage credentials, rate limit APIs, manage securely LLM providers, audit logs and monitoring.
 
 
 Model deployment and serving
