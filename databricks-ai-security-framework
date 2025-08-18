@@ -78,17 +78,17 @@ Model deployment and serving
 
 
 Operations and platform
-ML operations
-ML platform
+- ML operations
+- ML platform
 8 specific risks:
-11.1 Lack of MLOps — repeatable enforced standards
-12.1 Lack of vulnerability management
-12.2 Lack of penetration testing, red teaming and bug bounty
-12.3 Lack of incident response
-12.4 Unauthorized privileged access
-12.5 Poor SDLC
-12.6 Lack of compliance
-12.7 Initial access
+11.1 Lack of MLOps — repeatable enforced standards: Employ data-centric MLOps and LLMOps best practices. Trigger actions to keep human-in-the-loop. Evaluate models to capture performance insights.
+12.1 Lack of vulnerability management: Platform security — penetration testing, red teaming, bug bounty and vulnerability management and remediation including SLA.
+12.2 Lack of penetration testing, red teaming and bug bounty: Platform security — Incident Reponse Team. A bug bounty program implementation.
+12.3 Lack of incident response: Incident response team leadership, team strcture, incident response plan and testing.
+12.4 Unauthorized privileged access: Privileged management access (PAM) program and implementation, governance.
+12.5 Poor SDLC: Secure SDLC practices and culture. Integrate secuirty in design and CI/CD process.
+12.6 Lack of compliance: Platform compliance to build on a compliant platform. Compliance requirements, continuous evaluation and reporting.
+12.7 Initial access: Secure user and network access controls, control access to data & objects, secure model serving endpoints and monitoring audit logs.
 
 
 Reeference: https://www.databricks.com/sites/default/files/2025-02/databricks-ebook-dasf-2.pdf
