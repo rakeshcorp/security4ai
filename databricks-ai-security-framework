@@ -30,10 +30,10 @@ Data operations
 
 
 Model operations
- ML algorithm
- Evaluation
- Model build
- Model management
+- ML algorithm
+- Evaluation
+- Model build
+- Model management
 15 specific risks:
 5.1 Lack of tracking and reproducibility of experiments: Track ML training runs for measuring, versioning, tracking model artifacts/algorithms, training environment, hyperparameters, metrics and results.
 5.2 Model drift:  Secure model features to track changes to features, monitor data and AI system for these changes for further actions.
@@ -53,28 +53,28 @@ Model operations
 
 
 Model deployment and serving
- Model Serving —inference requests
-Model Serving — inference responses
+- Model Serving —inference requests
+- Model Serving — inference responses
 19 specific risks:
-9.1 Prompt injection
-9.2 Model inversion
-9.3 Model breakout
-9.4 Looped input
-9.5 Infer training data membership
-9.6 Discover ML model ontology
-9.7 Denial of service (DOS)
-9.8 LLM hallucinations
-9.9 Input resource control
-9.10 Accidental exposure of unauthorized data to models
-9.11 Model Inference API access
-9.12 LLM jailbreak
-9.13 Excessive agency
-10.1 Lack of audit and monitoring inference quality
-10.2 Output manipulation
-10.3 Discover ML model ontology
-10.4 Discover ML model family
-10.5 Black box attacks
-10.6 Sensitive data output from a model
+9.1 Prompt injection: Access control, secure model serving endpoints, implement AI guardrails, robust system prompts, rate limiting, strict input and output validation to reject invalid queries.
+9.2 Model inversion: Access control, encrypt models, secure model serving endpoints, implement AI guardrails, robust system prompts, rate limiting, strict input and output validation to reject invalid queries.
+9.3 Model breakout: Run models in isolated, least-privileged/isolated environments, sanitize outputs, parameterize plug-ins, and enforce least-privilege for external calls.
+9.4 Looped input: Set up inference tables to log model requests and responses, enabling monitoring, debugging, and evaluation of inference quality for potential retraining.
+9.5 Infer training data membership: Access control, encrypt models, secure model serving endpoints, implement AI guardrails, robust system prompts, rate limiting, encrypt models, model evaluation.
+9.6 Discover ML model ontology: Access control, encrypt models, secure model serving endpoints, implement AI guardrails, robust system prompts, rate limiting, encrypt models, model aliases/tags & annotations.
+9.7 Denial of service (DOS): Access control, secure network access, encrypt models, secure model serving endpoints, implement AI guardrails, robust system prompts, rate limiting, encrypt models.
+9.8 LLM hallucinations: Use techniques such as RAG, Fine tuning or pre-training on highly relevant, contextual data. Automate LLM evaluation (eg. LLM as a judge) and setup guardrails.
+9.9 Input resource control: Access control, secure network access, setup AI guardrails, Store and retrieve embeddings securely.
+9.10 Accidental exposure of unauthorized data to models: Attribute-based access control, protect data with filters/masking. Secure model features and monitoring audit logs.
+9.11 Model Inference API access: Secure network and Access control, secure model serving endpoints, manage credentials securely, monitoring audit logs.
+9.12 LLM jailbreak: Access control, secure network access, setup AI guardrails, secure model serving endpoints, limit access from models and AI agents.
+9.13 Excessive agency: Data classification, data lineage, attribute-based access control, protect data with filters/masking, limit access from models and AI agents, network segmentation.
+10.1 Lack of audit and monitoring inference quality:  Track model performance to evaluate quality, Set up inference tables for monitoring and debugging models, monitoring audit logs.
+10.2 Output manipulation: Secure model serving endpoints with encryption in transit & access control, rate limiting, robust system prompts and output validation.
+10.3 Discover ML model ontology: Access control, encrypt models, secure model serving endpoints, implement AI guardrails, robust system prompts, rate limiting, encrypt models, model aliases/tags & annotations.
+10.4 Discover ML model family: Access control, encrypt models, secure model serving endpoints, implement AI guardrails, robust system prompts, rate limiting, encrypt models, model aliases/tags & annotations.
+10.5 Black box attacks: Secure model serving endpoints with encryption in transit & access control, rate limiting, implement AI guardrails.
+10.6 Sensitive data output from a model: protect data with filters/masking, Secure model serving endpoints, implement AI guardrails, rate limiting.
 
 
 Operations and platform
