@@ -1,0 +1,137 @@
+SAIF (Secure AI Framework)
+
+Overview
+SAIF categorizes AI development into four main components:
+Data
+Infrastructure
+Model
+Application
+
+This goes beyond traditional software (code + infra + apps) by explicitly addressing data and model complexity.
+Security controls align with six SAIF core elements to mitigate risks across all stages.
+
+Components & Risks
+1. Data Components
+Why unique: In AI, data plays the role that code traditionally played.
+Risks:
+Data poisoning, poor quality, bias.
+Compromise of model weights → alters behavior.
+
+Key subcomponents:
+Data Sources – origin of raw data (APIs, sensors, web scraping).
+Data Filtering/Processing – cleaning, labeling, synthetic data generation.
+Training Data – curated final set used to train models.
+
+2. Infrastructure Components
+Why unique: AI development depends on secure environments for training, storage, and serving.
+Risks:
+Tampering with frameworks or code.
+Theft/poisoning of data, models, or weights.
+Supply chain vulnerabilities in frameworks/tools.
+
+Key subcomponents:
+
+Model Frameworks & Code – defines architecture, training steps, inference logic.
+Training, Tuning, Evaluation – refining models and testing against data.
+Data & Model Storage – risks at local, checkpoint, or published stages.
+Model Serving – systems that deploy models for real use (e.g., APIs).
+
+3. Model Components
+
+Why unique: Models combine code + weights trained on data.
+Risks:
+Malicious inputs (prompt injection, adversarial queries).
+Dangerous or unexpected outputs.
+
+Key subcomponents:
+The Model – result of training, stored and deployed.
+Input Handling – filter/sanitize external inputs to block attacks.
+Output Handling – filter/sanitize outputs to prevent harmful responses.
+
+4. Application Components
+
+Why unique: AI apps often allow natural language interaction and agentic behavior.
+Risks:
+Prompt injection and manipulation.
+Over-permissive agents/plugins causing unintended system changes.
+Increased attack surface via external integrations.
+
+Key subcomponents:
+
+Application – end-user or service-facing AI features.
+Agent/Plugin – tools or services invoked by AI apps (e.g., external APIs, models).
+
+
+
+
+
+SAIF Risk Map — Key Risks & Mitigations
+Risk Categories & Highlights
+1. Data-Related Risks
+
+Data Poisoning (DP) – adversarial data inserted/modified → degraded model, hidden backdoors.
+Mitigation: data sanitization, integrity checks, secure ML tooling.
+
+Unauthorized Training Data (UTD) – training on unlicensed/copyrighted/restricted data.
+Mitigation: strict data management, filtering.
+
+Excessive Data Handling (EDH) – retaining/processing user data beyond policy.
+Mitigation: user data lifecycle management.
+
+2. Model Integrity Risks
+
+Model Source Tampering (MST) – altering code/weights via supply chain or insider attacks.
+Mitigation: inventory tracking, access controls, integrity management.
+
+Model Exfiltration (MXF) – theft of models or weights (e.g., LLaMA leaks).
+Mitigation: secure storage/serving systems, access control.
+
+Model Deployment Tampering (MDT) – compromised serving infra/workflows (e.g., TorchServe exploits).
+Mitigation: hardened deployment pipelines, secure tooling.
+
+3. Availability & Evasion Risks
+
+Denial of ML Service (DMS) – flooding queries or “sponge examples” → downtime/latency.
+Mitigation: rate limiting, load balancing, input filtering.
+
+Model Reverse Engineering (MRE) – cloning models via excessive I/O queries.
+Mitigation: API rate limits, usage monitoring.
+
+Model Evasion (MEV) – adversarial perturbations tricking classifiers (e.g., altered stop signs).
+Mitigation: adversarial training, robust evaluation.
+
+4. Application & Integration Risks
+
+Insecure Integrated Component (IIC) – vulnerable plugins/libraries exploited (e.g., malicious Alexa skills).
+Mitigation: strict agent/plugin permissions, secure integrations.
+
+Prompt Injection (PIJ) – malicious instructions hidden in prompts (direct/indirect, text or multimodal).
+Mitigation: input/output sanitization, adversarial testing.
+
+Rogue Actions (RA) – unintended or malicious autonomous actions by AI agents.
+Mitigation: least-privilege agent/plugin permissions, human oversight, output validation.
+
+5. Privacy & Confidentiality Risks
+
+Sensitive Data Disclosure (SDD) – leakage of memorized training data, queries, or plugin responses.
+Mitigation: privacy-preserving tech, user data filtering, output sanitization.
+
+Inferred Sensitive Data (ISD) – models inferring private attributes (e.g., orientation, politics).
+Mitigation: training data management, sensitive output filtering, evaluation.
+
+Insecure Model Output (IMO) – unsafe outputs (e.g., phishing emails, malicious links).
+Mitigation: output validation, sanitization.
+
+🎯 Key Takeaways
+
+Risks span data, model, infrastructure, and application layers.
+Many risks mirror traditional IT threats (tampering, exfiltration, denial-of-service) but amplified by AI’s autonomy and unpredictability.
+Mitigation requires layered defenses:
+Secure-by-default ML tooling
+Strong IAM & access controls
+Input/output sanitization
+Continuous red-teaming and adversarial testing
+
+Both Model Creators (builders) and Model Consumers (users of AI apps) share responsibility.
+
+Reference: https://saif.google/secure-ai-framework
