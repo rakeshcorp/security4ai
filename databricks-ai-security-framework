@@ -2,10 +2,10 @@ Databricks AI Security Framework
 
 Data
 operations
- 1 Raw data
- 2 Data preparation
- 3 Datasets
- 4 Catalog and governance
+ Raw data
+ Data preparation
+ Datasets
+ Catalog and governance
 20 specific risks:
 1.1 Insufficient access controls
 1.2 Missing data classification
@@ -27,3 +27,69 @@ operations
 3.3 Label flipping
 4.1 Lack of traceability and transparency of model assets →
 4.2 Lack of end-to-end ML lifecycle
+
+
+
+Model operations
+ ML algorithm
+ Evaluation
+ Model build
+ Model management
+15 specific risks:
+5.1 Lack of tracking and reproducibility of experiments
+5.2 Model drift
+5.3 Hyperparameters stealing
+5.4 Malicious libraries
+6.1 Evaluation data poisoning
+6.2 Insufficient evaluation data
+6.3 Lack of interpretability and explainability
+7.1 Backdoor machine learning/Trojaned model
+7.2 Model assets leak
+7.3 ML supply chain vulnerabilities
+7.4 Source code control attack
+8.1 Model attribution
+8.2 Model theft
+8.3 Model lifecycle without HITL
+8.4 Model inversion
+
+
+Model deployment and serving
+ Model Serving —inference requests
+Model Serving — inference responses
+19 specific risks:
+9.1 Prompt injection
+9.2 Model inversion
+9.3 Model breakout
+9.4 Looped input
+9.5 Infer training data membership
+9.6 Discover ML model ontology
+9.7 Denial of service (DOS)
+9.8 LLM hallucinations
+9.9 Input resource control
+9.10 Accidental exposure of unauthorized data to models
+9.11 Model Inference API access
+9.12 LLM jailbreak
+9.13 Excessive agency
+10.1 Lack of audit and monitoring inference quality
+10.2 Output manipulation
+10.3 Discover ML model ontology
+10.4 Discover ML model family
+10.5 Black box attacks
+10.6 Sensitive data output from a model
+
+
+Operations and platform
+ML operations
+ML platform
+8 specific risks:
+11.1 Lack of MLOps — repeatable enforced standards
+12.1 Lack of vulnerability management
+12.2 Lack of penetration testing, red teaming and bug bounty
+12.3 Lack of incident response
+12.4 Unauthorized privileged access
+12.5 Poor SDLC
+12.6 Lack of compliance
+12.7 Initial access
+
+
+Reeference: https://www.databricks.com/sites/default/files/2025-02/databricks-ebook-dasf-2.pdf
