@@ -1,0 +1,56 @@
+Data Collection and Processing
+
+- Data Sources: Data must be collected from trusted sources. Untrusted or unknown data can introduce security vulnerabilities and compliance risks. 
+  A list of trusted sources should be maintained and updated.
+
+- Sensitive Data: Data used in AI systems should be properly classified, secured, and tracked based on its sensitivity. 
+  A data policy for the privacy and protection of sensitive data should be developed and communicated to all personnel.
+
+- Data Storage: Data should be stored according to a documented classification process. 
+  Datasets should be considered assets subject to asset management and access control policies. 
+  Access to data should be audited and require formal approval. Development and research systems should not have access to production databases.
+
+- Data Integrity: Datasets should be trusted throughout the AI system lifecycle. 
+  They should be uniquely identified to track unauthorized changes. 
+  Changes to a dataset must include an updated cryptographic description and management approval.
+
+- Processing Pipelines: Processing pipelines should be adequately secured to prevent unauthorized changes. 
+  Data should be tracked through its entire lifecycle, including subsets of larger datasets. It should be possible to trace a model back to the data it was trained on.
+
+
+
+Model Training
+
+- Model Design: Model training code should be reviewed by a responsible party. 
+  The model's design and architecture should be researched and developed in the appropriate environment, not in production.
+
+- Model Training: The model selection criteria should mimic natural data drift and expected adversarial conditions. 
+  Models trained under ideal conditions are likely to be brittle when deployed in adversarial settings. 
+  You can improve robustness by augmenting datasets with common corruptions or by using adversarial retraining.
+
+- Model Selection: Model design and training algorithms should include explicit or implicit model regularization to prevent overfitting.
+
+- Model Versioning: Models should be continuously retrained as new training data becomes available. 
+  Every time a model is trained, it should be assigned a new version to help in investigations.
+
+
+Model Deployment and System Monitoring
+
+- Security Testing: AI systems must be adequately tested for vulnerabilities before deployment. 
+  Formal acceptance testing criteria should be defined and documented for all new AI systems or upgrades. 
+  The test environment should closely resemble the final production environment.
+
+- Security and Compliance: The underlying network of the ML system must be robustly managed. 
+  Gateway devices should be configured to filter traffic and block unauthorized access. 
+  Network segregation should be consistent with the organization's access control policies.
+
+- Logs and Log Review: Consistent logging and monitoring are vital for all AI systems and their components. 
+  Event and security logs should be reviewed regularly for abnormal behavior.
+
+- Incident Management: Security logs should be collected in a central location. 
+  Organizations must have a formal process to report AI system incidents. 
+  Formal incident response and escalation procedures should be developed and tested periodically.
+
+- Business Continuity Planning: Critical AI assets should be identified and inventoried. 
+  Organizations should have a business continuity plan (BCP) or disaster recovery (DR) process to handle attacks on AI systems. 
+  The BCP should be tested on a repeated schedule for critical AI systems.
